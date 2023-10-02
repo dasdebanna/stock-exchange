@@ -1,0 +1,24 @@
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Exchange</title>
+</head>
+<body>
+    <h1>Stock Exchange</h1>
+    <ul>
+        {% for result in api.results %}
+            <li>
+                <h2><a href="{{ result.url }}" target="_blank">{{ result.title }}</a></h2>
+                <p>Published Date: {{ result.publishedDate }}</p>
+                <p>Author: {{ result.author }}</p>
+                <p>ID: {{ result.id }}</p>
+                <p>Score: {{ result.score }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}
