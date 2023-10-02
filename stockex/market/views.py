@@ -13,7 +13,7 @@ def index(request):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "x-api-key": "161af618-47cc-4380-b56a-e2ce501d1181"
+        "x-api-key": "YOUR-API-KEY"
     }
 
     response = requests.post(url, json=payload, headers=headers)
